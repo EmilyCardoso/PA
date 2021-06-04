@@ -1,0 +1,79 @@
+1) - Criar um algoritmo que leia os elementos de uma matriz inteira de 5 X 5 e imprima a matriz (em forma de matriz).'
+import random
+#aux=[20,21,22,23,24,25]
+#mat=[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]]
+mat=[]
+aux=[]
+for linha in range(0,5,1):
+    aux= []
+    for coluna in range(0,5,1):
+        aux.append(int(input(f'informe um valor :[{linha} {coluna}]=')))
+        #aux.append(random.randint(11,99))
+    mat.append(aux)
+
+#exibir matriz
+for linha in range(5):
+    for coluna in range(5):
+        print(mat[linha][coluna],end=' ')
+    print()
+    ######################################################################
+    '''2) - Desenvolva um algoritmo que leia os elementos de uma matriz inteira de 5 X 5
+e imprima a soma dos elementos da matriz.'''
+#import random
+mat=[]
+soma=0
+for linha in range(0,5,1):
+    aux= []
+    for coluna in range(5):
+        int(input(f'informe um valor :[{linha} {coluna}]='))
+       # aux.append(random.randint(11,99)
+    mat.append(aux)
+
+#for linha in range(5):
+    #print(mat,sum[linha][coluna],end=' ')
+
+#exibir matriz
+for linha in range(5):
+    for coluna in range(5):
+      soma= soma+mat[linha][coluna]
+print(f'A soma dos elementos da matriz é{soma}')
+######################################################################################
+parei aquiiiii
+'''3) - Crie um algoritmo que leia os elementos de uma matriz inteira de 8 X 8 e imprima as seguintes informaÃ§Ãµes:
+	a)	A soma dos elementos da matriz;
+	b)	A soma dos elementos da matriz cujo seu valor Ã© par;
+	c)	A soma dos elementos da matriz cujo seu valor Ã© Ã­mpar;'''
+#import random
+mat=[]
+soma=0
+impar=0
+somapar=0
+for linha in range(0,5,1):
+    aux= []
+    for coluna in range(5):
+        int(input(f'informe um valor :[{linha} {coluna}]='))
+        #aux.append(random.randint(11,99)
+    mat.append(aux)
+
+#exibir matriz
+
+#A A soma dos elementos da matriz;
+for linha in range(5):
+    for coluna in range(5):
+      soma= soma+mat[linha][coluna]
+print(f'A soma dos elementos da matriz é{soma}')
+
+#b	A soma dos elementos da matriz cujo seu valor Ã© par;
+for linha in range(5):
+    for coluna in range(5):
+       if mat[linha][coluna]%2==0:
+           somapar=somapar+mat[linha][coluna]
+print(f'A soma dos elementos da matriz é{soma}')
+
+#c A soma dos elementos da matriz cujo seu valor Ã© Ã­mpar;
+for linha in range(5):
+    for coluna in range(5):
+        if mat[linha][coluna] % 2 != 0:
+            somaimppar = somaimpar + mat[linha][coluna]
+print(f'os elementos impares da matriz são {soma}')
+    
