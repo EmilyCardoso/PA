@@ -1,0 +1,308 @@
+'''01ler 80 numeros e ao final informar quantos nuemros(s) estao no intervalo entre 10 (inclusive)e 150 inclusive)'''
+
+
+# fazer repetir 8
+
+contador = 1
+qtdintervalo = 0
+
+while contador <= 80:
+  valor=int(input('informe um valor:'))
+
+  if valor >= 10:
+        if valor <= 150:
+            qtdintervalo = qtdintervalo + 1
+
+        contador = contador + 1
+
+print(f'foram digitados {qtdintervalo}no intervalo entre 10 e 150')
+
+#######################################################################################################
+[18:06, 03/06/2021] Emy: 02) - Escrever um algoritmo que leia os dados de “N” pessoas (nome, sexo, idade e saúde) e informe se está apta ou não para'
+'cumprir o serviço militar obrigatório. Informe os totais.'
+
+continuar= True
+qtdPessoasAptas=0
+qtdPessoasInaptas=0
+
+
+while continuar:
+    nome=input('informe o nome da pessoa:')
+    sexo=input('informe o sexo da pessoa (M)asculino ou (F)eminino:')
+    idade=int(input('informe a idade da pessoa:'))
+    saude=input('informe o estado de saúde da pessoa (A)pto ou (I)napto:')
+    print('='* 40)
+    
+    if "M"==sexo.upper():
+        if idade>= 18:
+            if 'A'==saude.upper() :
+                print((f'Bem Vindo {nome} ao serviço militar!!!!'))
+                print('='* 40)
+                qtdPessoasAptas=qtdPessoasAptas +1
+            else:
+                qtdPessoasInaptas = qtdPessoasInaptas+1
+        else:
+            qtdPessoasInaptas=qtdPessoasInaptas+1
+
+    else:
+        qtdPessoasInaptas =qtdPessoasInaptas+1
+
+    opcao=input('Digite N para sair:')
+    if 'N' == opcao.upper():
+      continuar= False
+
+    print(f'Totais de pessoas Aptas{qtdPessoasAptas}')
+    print(f'Totais de pessoas Inaptas{qtdPessoasInaptas}')
+    print('='*40)
+    
+  ###############################################  
+    
+[18:07, 03/06/2021] Emy: '''3) - Faça um algoritmo que receba um número e mostre uma mensagem caso este número seja maior que 80, menor
+que 25 ou igual a 40. O usuário deverá informar se deseja continuar informando os valores.
+'''
+continuar= True
+
+while continuar:
+
+    numero=int(input('informe um numero'))
+
+    print('='*38)
+    if numero>80:
+        print(f'O numero informado {numero} é maior que 80')
+    elif numero< 25:
+        print(f'O numero informado {numero}é menor que 25')
+    elif numero == 40:
+        print(f'O numero informado {numero} é igual a 40')
+    print('=' * 38)
+    resposta= input('Digite N para sair ou qualquer tecla para continuar:')
+    if 'N'== resposta.upper():
+        continuar= False
+    #######################################################    
+        
+ '''04) - Faça um algoritmo que receba “N” números e mostre positivo, negativo ou zero para cada número.'''
+continuar =True
+while continuar:
+
+    numero= float(input('informe um numero'))
+    print('='*40)
+    if numero >0:
+        print(f'o numero {numero}é positivo')
+    else:
+        if numero <0:
+            print(f'p numero {numero}é negativo')
+
+        else:
+             print(f'o numero {numero} é zero')
+    print('=' * 40)
+    Resposta = input('Digite N para sair ou qualquer tecla para continuar: ')
+    if 'N' == Resposta.upper():
+            continuar = False
+            
+           ##################################### #####o 5 nao arrumei
+           #################################################################
+           [18:08, 03/06/2021] Emy: '''06) - A concessionária de veículos “CARANGO VELHO” está vendendo os seus veículos com desconto. Faça um algoritmo que calcule e exiba o valor do desconto e o valor a ser pago pelo cliente de vários carros. O desconto deverá ser calculado de acordo com o ano do veículo. Até 2000 - 12% e acima de 2000 - 7%. O sistema deverá perguntar se o usuário deseja continuar calculando desconto até que a resposta seja:
+“(N) Não”. Informar total de carros com ano até 2000 e total geral.'''
+
+
+continuar=True
+qtdCarroAnoate2000=0
+qtdGeralCarros=0
+
+while continuar:
+        anoAno=int(input('Informe o ano do carro:'))
+        valorCarro= float(input('informe o valor do carro:'))
+        if anoAno <=2000:
+            descontoValorCarro=valorCarro *10/100
+            valorCarroComDesconto =valorCarro -descontoValorCarro
+            qtdCarroAnoate2000 =qtdCarroAnoate2000 +1
+            print(f'O valor de desconto foi R${descontoValorCarro}')
+            print(f'O valor do carro com desconto foi R${valorCarroComDesconto}')
+
+        else:
+            descontoValorCarro=valorCarro *7/100
+            valorCarroComDesconto =valorCarro - descontoValorCarro
+            print(f'O valor de desconto foi R${descontoValorCarro}')
+            print(f'O valor do carro com desconto foi R${valorCarroComDesconto}')
+
+        qtdGeralCarros =qtdGeralCarros+1
+
+        opçao=input('se Deseja parar digite N')
+        if "N"==opçao.upper():
+            continuar= False
+print(f' A quantidade de carros informados cm ano até 2000 foi de {qtdCarroAnoate2000}carros')
+print(f'O total de carros informados  foi {qtdGeralCarros}carros')
+[18:09, 03/06/2021] Emy: 7-' Faça um algoritmo que receba o preço de custo e o preço de venda de 40 produtos. Mostre como '
+'resultado se houve lucro, '
+'prejuízo ou empate para cada produto. Informe média de preço de custo e do preço de venda.'
+
+
+
+custo: 0
+preco:0
+somapreco:0
+somacusto:0
+
+
+while range (1, 40):
+    custo=input(float('informe o custo do produto:'))
+    preco=input(float('informe o preco do produto: '))
+
+    if custo < preco :
+        print(f'Houve lucro de {preco} + {custo} ')
+
+    elif custo > preco:
+        print(f'houve prejuizo de {custo} - {preco}')
+
+    elif custo == preco:
+        print(f'houve um empate {preco}')
+
+
+print(f' A media de custo é {somacusto/40}')
+print(f'A media de preco é {somapreco}')
+[18:09, 03/06/2021] Emy: '''08) - Faça um algoritmo que receba o nome a idade e o sexo de dez funcionário. Para cada funcionário mostre o nome e o salário líquido:
+      SEXO	IDADE	SALÁRIO LÍQUIDO
+      M		>= 30	R$ 100,00
+      M		< 30	R$ 50,00
+      F		>= 30	R$ 200,00
+      F		< 30	R$ 80,00
+'''
+idade=0
+nome=0
+sexo=str
+
+
+for continuar in range(3):
+    nome=input('Digite seu nome:')
+    idade=int(input('digite sua idade:'))
+    sexo=input('digite seu sexo,M ou F:')
+    if sexo.upper( )=='M'and idade >=30:
+        print (f'seu salario liquido é de 100,00 R$')
+    elif sexo.upper()=='M'and idade <30:
+        print (f'seu salario liquido é de 50,00 R$')
+    elif sexo.upper() == 'F' and idade >= 30:
+        print(f'seu salario liquido é de 200,00 R$')
+    elif sexo.upper() == 'F' and idade >= 30:
+        print(f'seu salario liquido é de 80,00 R$')
+        
+        ##############################################################################3
+ ''09) - Uma Companhia de Seguros possui nove categorias de seguro baseadas na idade e ocupação do segurado.
+Somente pessoas com pelo menos 17 anos e não mais de 70 anos podem adquirir apólices de seguro. Quanto às classes
+ de ocupações, foram definidos três grupos de risco. A tabela abaixo fornece as categorias em função da faixa etária
+ e do grupo de risco. Dados nome, idade e grupo de risco, determinar a categoria do pretendente à aquisição de tal seguro.
+  Imprimir o nome a idade e a categoria do pretendente e caso a idade não esteja na faixa necessária, imprimir uma mensagem.
+	  GRUPO DE RISCO
+	  IDADE		BAIXO		MEDIO		ALTO
+	  17 A 20		1			2			3
+	  21 A 24		2			3			4
+	  25 A 34		3			4			5
+	  35 A 64		4			5			6
+	  65 A 70		7			8			9
+'''
+
+continuar=True
+while continuar:
+    nome= input('informe o nome do cliente:')
+    idade=int(input('informe a sua  idade:'))
+    grupoRisco=input('informe grupo de risco do cliente(B)aixo ou (M)edio ou(A)lto:')
+
+    if idade >=17 and idade<=20:
+        if grupoRisco =='B':
+            print(f'O cliente{nome} possui a categoria{1}')
+        elif grupoRisco=='M':
+            print(f'O cliente{nome} possui a categoria{2}')
+        elif grupoRisco == 'A':
+            print(f'O cliente{nome} possui a categoria{3}')
+        else:
+            print(f'Grupo de risco informado inavalido.')
+
+    elif idade >=21 and idade <=24:
+        if grupoRisco== 'B':
+            print(f'O cliente{nome} possui a categoria{2}')
+        elif grupoRisco=='M':
+            print(f'O cliente{nome} possui a categoria{3}')
+        elif grupoRisco == 'A':
+            print(f'O cliente{nome} possui a categoria{4}')
+        else:
+            print(f'Grupo de risco informado inavalido.')
+
+    elif idade >= 25 and idade <= 34:
+        if grupoRisco == 'B':
+            print(f'O cliente{nome} possui a categoria{3}')
+        elif grupoRisco == 'M':
+            print(f'O cliente{nome} possui a categoria{4}')
+        elif grupoRisco == 'A':
+            print(f'O cliente{nome} possui a categoria{5}')
+        else:
+            print(f'Grupo de risco informado inavalido.')
+
+    elif idade >= 35 and idade <= 64:
+        if grupoRisco == 'B':
+            print(f'O cliente{nome} possui a categoria{4}')
+        elif grupoRisco == 'M':
+            print(f'O cliente{nome} possui a categoria{5}')
+        elif grupoRisco == 'A':
+            print(f'O cliente{nome} possui a categoria{6}')
+        else:
+            print(f'Grupo de risco informado inavalido.')
+
+    elif idade >= 65 and idade <= 70:
+        if grupoRisco == 'B':
+            print(f'O cliente{nome} possui a categoria{7}')
+        elif grupoRisco == 'M':
+            print(f'O cliente{nome} possui a categoria{8}')
+        elif grupoRisco == 'A':
+            print(f'O cliente{nome} possui a categoria{9}')
+        else:
+            print(f'Grupo de risco informado inavalido.')
+
+    reposta=input('Digite N para sair ou qualquer outra tecla para continuar')
+    if 'N'== reposta.upper():
+        continuar= False
+ #########################################################
+'10) - Desenvolva um algoritmo que imprima os números de um a mil.'
+
+for x in range (1,1001):
+    print(x)
+print('acabou')
+##############################################################################
+'11) - Desenvolva um algoritmo que imprima os valores pares entre 0 e 200.'
+
+for n in range(0,201,2):
+    print(n)
+    print ('acabou')
+    #####################################################################################3
+
+    '12) - Desenvolva um algoritmo que imprima os valores ímpares entre 200 e 1.'
+
+for n in range(1,200):
+    if n % 2:
+        print(n)
+print ('acabou')
+##############################################
+'13) - Desenvolva um algoritmo que receba um valor como limite inicial e outro valor como limite final.'
+'Ao final exibir quantos valores no intervalo informados são pares e ímpares.'
+
+núm=[[],[]]
+valor= 0
+
+
+for c in range(1,10):
+    valor=int(input(f'digite o {c}o. valor:'))
+    if valor %2 == 0:
+        núm[0].append(valor)
+    else:
+        núm[1].append(valor)
+print('-='*30)
+núm[0].sort()
+núm[1].sort()
+print(f'os valores pares digitados foram:{núm[0]}')
+print(f'os valores impares digitados foram:{núm[0]}')
+############################################################
+
+
+fazer 14,15,16,17,18
+        
+        
+        
+        
+        
