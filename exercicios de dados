@@ -1,0 +1,290 @@
+'''1) - Desenvolva um programa em python que receba 10 valores informados pelo usuário, armazene-os em um vetor,
+depois exiba os dados do vetor.
+'''
+
+num=[10]
+vetores=[]
+
+
+for num in range (1,11):
+     num=(input(f'Digite um valor {num}:'))
+     vetores.append(num)
+
+print('vetores:',vetores)
+#########################################################################################################
+''2) - Desenvolva um programa em python que receba 10 nomes informados pelo usuário e armazene-os em um vetor chamado nomes
+    . No final exiba uma lista numerada com os nomes cadastrados no vetor.'''
+
+
+#obter os dados e gravar eles na lista
+
+
+cont=1
+nome=[]
+
+while cont<= 10:
+     nome.append(input(f'informe o {cont} nome:'))
+     cont= cont +1
+
+#Exibir os dados de nomes forma numerada
+cont=0
+while cont<10:
+     print(f'{cont+1}{nome[cont]}')
+     cont+=1
+     ###############################################################################################################
+     '''3) - Desenvolva um programa em python que receba 15 valores informados pelo usuário armazene-os em vetor chamado num,
+e imprima uma listagem numerada contendo a seguinte mensagem "Par" ou "Ímpar" de acordo com os valores cadastrados no vetor.
+'''
+
+#correção
+num=[]
+cont=0
+
+for cont in range(1,16,1):
+    num.append(int(input(f'Informe o {cont}ºnumero:')))
+
+#descobri se o valor é impar ou par
+cont=1
+for numero in num:
+    if numero %2==0:
+        print(f'{cont}-par')
+    else:
+        print(f'{cont}-impar')
+        cont=cont+1
+######################################################################################################################
+'''4) - Desenvolva um programa em python que leia valores inteiros para o vetor A e construa outro vetor B da
+ seguinte forma:
+VETOR - A [3,  8,   4,  2,  ...,  10]
+VETOR - B [9,  4,  12,  1,  ...,  5]
+'''
+
+
+#multiplicar e dividir essa estrutura é uma sequencia ou seja
+#se o indice do elemento da lista for par *3
+
+
+a=[]
+b=[]
+
+for cont in range(1,11,1):
+    a.append(int(input(f'informe o {cont} valor:')))
+
+#fazer lista b
+
+for cont in range(0,10,1):
+    if cont %2==0:
+        b.append(a[cont]*3)
+    else:
+        b.append(a[cont]/2)
+
+print('lista A',a)
+print('lista B',b)
+
+
+###########################################################################################
+'''5) - Desenvolva um programa em python que leia 30 valores inteiros e armazene-os em um vetor. Exib a os valores do vetor
+ao contrário da ordem de leitura dos valores.
+'''
+import random #faz os numeros virem  aleatorios
+
+valores=[]
+
+
+for cont in range(1,31,1):
+    #valores.append(int(input(f'Informe o {cont}ºvalor:')))
+    valores.append(random.randint(1,100))
+print(valores)
+
+for cont in range (29,-1,-1):
+    print(valores[cont],end=',')
+
+#end coloca espaço e faz não quebrar linhas tudo permanece na mesma linha
+#exemplo  print(valores[cont],end=',')
+###############################################################################################################
+[18:03, 03/06/2021] Emy: 6 tenho que arrumar
+[18:03, 03/06/2021] Emy: 7 tbm
+##################################################################################################################
+'8) - Desenvolva um programa em python que receba 10 valores numéricos e guarde-os em uma lista. Verifique se os
+valores cadastrados são pares ou ímpares e cadastre os valores pares em uma
+ nova lista e os ímpares em outra lista. No final exibir o conteúdo das três listas.'''
+
+
+num=[]
+impares=[]
+pares=[]
+
+
+while cont<= 2:
+    num.append(input(f'informe um valor{cont+1}:'))
+    cont = cont + 1
+
+
+for numero in num:
+    if 2 != 0:
+        print(f'{cont}-impares{impares}')
+        cont=cont+1
+    #else:
+
+
+print(f'os valores cadastrados foram:{num}')
+print(f'os valores pares cadastrados foram:{pares}')
+print(f'os valores impares cadastrados foram:{impares}')
+#############################################################################################################################
+'''9) - Desenvolva um programa em python que leia 10 valores numéricos informados pelo usuário
+e armazene-os em um vetor A, leia mais 10 valores numéricos informado pelo usuário armazene-os em outro vetor B,
+ Gere um vetor C, que receberá a soma dos elementos do vetor A e B na sua
+ respectiva posição. Ao final exibir os três vetores A, B e C.'''
+
+
+A=[]
+B=[]
+C=[]
+
+
+for cont in range (10):
+    A.append(input(f'informe um numero{cont+1}:'))
+    A.append(input(f'informe um numero{cont+1}:'))
+
+
+for cont in range(10):
+    C.append(A[cont]+B[cont])
+
+print(f'A lista A contem os elementos:')
+print(A)
+print(f'A lista Bcontem os elementos:')
+print(B)
+print(f'A lista contem os elementos:')
+print(C)
+###########################################################################################
+''10) - Desenvolva um programa em python que leia 10 valores
+ inteiros informado pelo usuário. No final exibir o menor valor cadastrado no vetor. '''
+
+
+
+
+lista=[]
+menorValor=[]
+primeiroValor=True
+
+for cont in range(10):
+    lista.append(int(input(f'informe o {cont+1}º:')))
+
+
+for valor in lista:
+    if primeiroValor:
+        menorValor=valor
+        primeiroValor=False
+    else:
+        if valor<menorValor:
+            menorValor=valor
+
+print(f'o menor valor informado foi {menorValor}')
+####################################################################################################
+'''11) - Desenvolva um programa em python que leia 10 valores
+inteiros informado pelo usuário. No final exibir o maior valor cadastrado no vetor. '''
+
+
+lista=[]
+maiorValor=[]
+primeiroValor=True
+
+for cont in range(10):
+    lista.append(int(input(f'informe o {cont+1}º:')))
+
+
+for valor in lista:
+    if primeiroValor:
+        maiorValor=valor
+        primeiroValor=False
+    else:
+        if valor>maiorValor:
+            maiorValor=valor
+
+print(f'o menor valor informado foi {maiorValor}')
+############################################################################################################
+''12) - Desenvolva um programa em python que leia 10 valores inteiros informado pelo usuário.
+ No final exibir o menor e o maior valor cadastrado no vetor.'''
+
+lista=[]
+menorValor=[]
+maiorValor=[]
+primeiroValor=True
+
+for cont in range(10):
+    lista.append(int(input(f'informe o {cont+1}º:')))
+
+for valor in lista:
+    if primeiroValor:
+        menorValor=valor
+        maiorValor=valor
+        primeiroValor=False
+    else:
+        if valor<menorValor:
+            menorValor=valor
+
+        if valor>maiorValor:
+            maiorValor=valor
+
+print(f'o menor valor informado foi {menorValor}')
+print(f'o maior valor informado foi {maiorValor}')
+#####################################################################################################
+[18:05, 03/06/2021] Emy: '''13) - Desenvolva um programa em python que leia 15 valores informado pelo usuário e cadastre-os
+ em uma lista. O usuário deverá informar um valor
+ a ser procurado no vetor, caso encontre este valor exiba o índice desse elemento.'''
+
+lista=[]
+valorP=0
+
+for cont in range(15):
+    lista.append(int(input(f'informe o valor para o indice{cont}:')))
+
+
+valorP=int(input(f'informe o valor a ser procurado na lista:'))
+print(lista)
+
+for cont in range(15):
+    if list[cont]==valorP:
+        print(f'o valor procurado {valorP} foi achado no indice {cont}.')
+        #############################################################################
+[18:05, 03/06/2021] Emy: '''14) - Desenvolva um programa em python que leia o nome e uma nota para um aluno, crie duas listas para armazenar estes valores,
+      o usuário deverá informar um nome de aluno para a pesquisar, se o aluno existir na lista com os nomes do aluno, exibir o nome
+      e a nota do aluno, caso contrário informar a mensagem "Aluno não cadastrado.
+'''
+
+
+nomes=[]
+media=[]
+continuar=True
+
+while continuar:
+    nomes.append(input('informe o nome do aluno:'))
+    media.append(float(input(f'informe a media do aluno')))
+    if input('deseja continuar (S)im ou (N)ão').upper()=="N":
+        continuar=False
+
+pesquisa=input("informe o nome do aluno para pesquisa:")
+if pesquisa not in nomes:
+    print(f'')
+    ####################################################################################################
+    '15) - [DESAFIO] Desenvolva um procurado em python que leia valores inteiros para um vetor de 20
+posições e mostre-o. Em seguida, troque o primeiro elemento pelo o último, o segundo com o penúltimo, o terceiro com o
+antepenúltimo e, assim, sucessivamente. Mostre o novo vetor após todas as trocas. '''
+
+
+
+vetor=[]
+inicio=0
+fim=19
+
+for cont in range(20):
+    vetor.append(int(input(f'informe o {cont+1}ºvalor:')))
+    print(vetor)
+for cont in range (0,10,1):
+    aux=vetor[inicio]
+    vetor[inicio]=vetor[fim]
+    #vetor=[fim]= aux
+    inicio =inicio+1
+    fim=fim-1
+    print(vetor)
+    ###########################################fim
+    
