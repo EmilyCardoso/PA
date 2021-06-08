@@ -76,4 +76,122 @@ for linha in range(5):
         if mat[linha][coluna] % 2 != 0:
             somaimppar = somaimpar + mat[linha][coluna]
 print(f'os elementos impares da matriz são {soma}')
+########################################################################################
+'''4) - Crie um algoritmo que leia os elementos de uma matriz inteira de 10 X 10 e imprima as seguintes informações:
+	a)	A soma dos elementos onde a soma do índice da linha + o índice da coluna for par;
+	b)	A soma dos elementos onde a soma do índice da linha + o índice da coluna for ímpar;
+	c)	A quantidade de valores pares na matriz;
+	d)	A quantidade de valores ímpares na matriz;'''
+
+import random
+dados=[]
+aux=0
+somapar=0
+somaimpar=0
+qtdpares=0
+qtdimpares=0
+
+for linha in range(0,10,1):
+    aux=[]
+    for coluna in range (0,10,1):
+        #aux.append(int(input(f'informe o elemento da matriz [{linha},{coluna}]=')))
+        aux.append(random.randint(1,20))
+    dados.append(aux)
+
+#A- A soma dos elementos onde a soma do índice da linha + o índice da coluna for par;
+for linha in range(0,10,1):
+    for coluna in range (0,10,1):
+        if linha +coluna %2 ==0:
+            somapar= somapar+dados[linha][coluna]
+
+print(f'A soma dos elementos onde a linha +a coluna é par:{somapar}')
+
+# B-A soma dos elementos onde a soma do índice da linha + o índice da coluna for ímpar;
+for linha in range(0,10,1):
+    for coluna in range (0,10,1):
+        if linha +coluna %2 !=0:
+            somaimpar= somaimpar+dados[linha][coluna]
+print(f'A soma dos elementos onde a linha +a coluna é impar:{somaimpar}')
+
+
+# c-A quantidade de valores pares na matriz;
+
+for linha in range (0,10,1):
+    for coluna in range (0,10,1):
+        if dados [linha] [coluna] % 2==0:
+            qtdpares=qtdpares+1
+# d -A quantidade de valores ímpares na matriz;
+        else:
+            qtdimpares =qtdimpares+1
+
+print(f'a quantidade de elementos pares dentro da matriz é{qtdpares}:')
+print(f'a quantidade de elementos impares  dentro da matriz é{qtdimpares}:')
+######################################################################################
+
+
+'5) - Entrar com valores para uma matriz A [3X4] gere e exiba uma matriz B que é o triplo da matriz A.'
+
+import random
+a=[]
+b=[]
+aux=0
+
+for linha in range (0,3,1):
+    aux=[]
+    for coluna in range(0,4,1):
+       # aux.append(int(input(f'informe o elemento da matriz {linha}, {culuna}]=')))
+        aux.append(random.randint(1,10))
+    a.append(aux)
+
+
+for linha range (0,3,1):
+     aux=[]
+     for coluna in range (0,4,1):
+        aux.append=(a[linha][coluna]*3)
+    b.append(aux)
+
+
+print(f' Essa é a matriz A',{a})
+print(f' Essa é a matriz B com o triplo da matriz A',{b})
+#############################################################################################
+'''6) - Considere uma turma com 10 alunos, cada um com 4 notas. Estes dados são  armazenados em uma matriz 10 x 5,
+em que a primeira coluna armazena a matrícula do aluno e as 4 últimas armazenam as suas notas. Fazer um algoritmo que:
+	a) Leia estes dados, armazenando-os;
+	b) Imprima a média de cada aluno;
+	c) Imprima a maior média e a matrícula do aluno que a possui;
+
+'''
+import random
+
+alunos=[]
+soman=0
+maiormedia=0
+matricula=0
+
+for linha in range(0,10,1):
+    aluno=[]
+    for coluna in range (0,5,1):
+        if coluna ==0:
+            aluno.append(int(input(f'informe os dados do  aluno: =')))
+        else:
+            aluno.append(float(input(f'informe a{coluna}º nota do aluno')))
+       # aluno.append(random.randint(0,10))
+    alunos.append(aluno)
+#A-Leia estes dados, armazenando-os(acima^)
+
+#b) Imprima a média de cada aluno;
+for linha in range(0,10,1):
+    for coluna in range(0,5,1):
+        if coluna !=0:
+            soman =soman +alunos[linha][coluna]
+# soman= alunos[linha][1]+ alunos[linha][2]+alunos[linha][3]+alunos[linha][4](não gostei hahaha mas pode ser util)
+ #c) Imprima a maior média e a matrícula do aluno que a possui;
+        media= soman/4
+        if media >maiormedia:
+            maiormedia=media
+            matricula=alunos[linha][0]
+        print(f'A media do {linha+1}º aluno é {media}')
+
+
+print(f'A maior media dos alunos e matricula:{matricula} Média:{maiormedia}')
     
